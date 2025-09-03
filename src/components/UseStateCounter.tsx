@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import React from 'react';
 
-const UseStateCounter = () => {
-  const [count, setCount] = useState(0);
+interface UseStateCounterProps {
+  count: number;
+  setCount: (childData: number) => void;
+}
+
+const UseStateCounter: React.FC<UseStateCounterProps> = ({ count, setCount }) => {
 
   return (
     <div>
-      <h2>{'Component Counter'}</h2>
+      <h2>{'useState - Component Counter'}</h2>
       <button 
         style={{
           backgroundColor: "#007bff",
