@@ -8,7 +8,7 @@ const UseEffect: React.FC<UseEffectProps> = ({ count }) => {
 console.log(`UseEffect - count: ${count}`);
     useEffect(() => {
         console.log(`UseEffect - useEffect!! - count: ${count}`);
-    }, [count]); // [] = effect will run once after mounting 
+    }, [count]);
 
   return (
     <div>
