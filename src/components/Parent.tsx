@@ -19,7 +19,7 @@ const Parent: React.FC = () => {
   return (
     <div>
       <h1>Component Parent</h1>
-      <div>Current theme: {theme}</div>
+      <div>Current theme - useContext: {theme}</div>
       <Child text={message} onButtonClick={handleChildClick} />
       <Child2 count={count} onButtonClick={handleChildClick}/>
       <UseStateCounter count={count} setCount={setCount}/>

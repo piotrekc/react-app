@@ -51,7 +51,7 @@ export function Navbar() {
 
   return (
     <nav style={styles}>
-      <span>Current theme: {theme}</span>
+      <span>Current theme (createContext provider): {theme}</span>
       <button onClick={toggleTheme} style={{ marginLeft: "1rem" }}>
         Change theme
       </button>
