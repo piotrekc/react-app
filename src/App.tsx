@@ -1,15 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import Parent from './components/Parent';
+import { ThemeProvider, Navbar } from './context/ThemeProvider';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-      <Parent/>
-      </header>
-    </div>
+    <ThemeProvider>
+      <Navbar />
+      <div className="App">
+        <header className="App-header">
+        <Parent/>
+        </header>
+      </div>
+    </ThemeProvider>
   );
 }
 
