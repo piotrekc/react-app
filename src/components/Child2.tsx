@@ -8,7 +8,6 @@ interface Child2Props {
 
 const Child2: React.FC<Child2Props> = ({ count, onButtonClick }) => {
 
-
     return (
         <div>
             <h1>Child2</h1>
