@@ -4,6 +4,7 @@ import UseStateCounter from './UseStateCounter';
 import UseEffect from './UseEffect'
 import UseMemo from './UseMemo';
 import Child2 from './Child2';
+import CustomComponent from './Custom';
 import ThemeContext from '../context/ThemeContext';
 
 const Parent: React.FC = () => {
@@ -34,8 +35,9 @@ const Parent: React.FC = () => {
       {/* <Child2 count={count} onButtonClick={handleChildClick}/> */}
       {/* <UseStateCounter count={count} setCount={setCount}/> */}
       <UseStateCounter count={count} setCount={increase}/>
+      <CustomComponent count={count} setCount={increase}/>
       {/* <UseEffect count={count}/> */}
-      <UseMemo count={count}/>
+      {/* <UseMemo count={count}/> */}
     </div>
   );
 };
