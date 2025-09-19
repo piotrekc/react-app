@@ -6,6 +6,7 @@ import UseMemo from './UseMemo';
 import Child2 from './Child2';
 import CustomComponent from './Custom';
 import ThemeContext from '../context/ThemeContext';
+import useToggle from '../hooks/useToggle'
 
 const Parent: React.FC = () => {
   console.log(`Parent - render`);
@@ -26,11 +27,19 @@ const Parent: React.FC = () => {
   };
 
  const theme = useContext(ThemeContext); // "dark"
+  const [isOpen, toggleOpen] = useToggle();
 
   return (
     <div>
       <h1>Component Parent</h1>
       <div>Current theme - useContext: {theme}</div>
+      <div>
+        <p>Custom hook</p>
+      <button onClick={ toggleOpen }>
+        {isOpen ? "Close" : "Open"}
+      </button>
+
+        </div>
       {/* <Child text={message} onButtonClick={handleChildClick} /> */}
       {/* <Child2 count={count} onButtonClick={handleChildClick}/> */}
       {/* <UseStateCounter count={count} setCount={setCount}/> */}
